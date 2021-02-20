@@ -1,8 +1,15 @@
+import s from './Filter.module.css';
+
 function Filter({ text, onChange }) {
   return (
-    <label>
+    <label className={s.label}>
       Find contacts by name
-      <input name="filter" onChange={onChange} value={text}></input>
+      <input
+        className={s.input}
+        name="filter"
+        onChange={onChange}
+        value={text}
+      ></input>
     </label>
   );
 }

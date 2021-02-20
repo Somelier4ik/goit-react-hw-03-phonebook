@@ -1,12 +1,12 @@
-// import Contact from '../Contact/Contact';
+import s from './ContactsList.module.css';
+import Contact from '../Contact/Contact';
 
-function ContactsList({ contactsArr }) {
+function ContactsList({ contactsArr, onDelete }) {
   return (
-    <ol>
+    <ol className={s.list}>
       {contactsArr.map(contact => {
-        // return <Contact key={contact.id} contactName={contact.contactName} />;
         return (
-          <li key={contact.id}>{`${contact.contactName} ${contact.number}`}</li>
+          <Contact key={contact.id} contact={contact} onDelete={onDelete} />
         );
       })}
     </ol>
