@@ -64,6 +64,7 @@ class App extends Component {
 
     this.setState({
       contacts: notDeletedContacts,
+      filter: '',
     });
   };
 
